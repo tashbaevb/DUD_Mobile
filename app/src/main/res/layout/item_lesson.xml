@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:padding="14dp">
+    <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="26dp">
+        <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_launcher_background"
+                android:padding="8dp"
+                android:orientation="vertical" >
+            <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="24dp"
+                    android:layout_gravity="center_horizontal">
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal">
+                <TextView
+                        android:id="@+id/model_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="lesson_id"
+                        android:visibility="gone"/>
+                <TextView
+                        android:id="@+id/title_lesson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Red hooddy"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                        android:id="@+id/descr_lesson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DESCR DESCR LOREM"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                <LinearLayout
+                        android:id="@+id/ll_conterlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:text="items:"
+                            android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                        android:id="@+id/btn_zoom"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="18dp"
+                        android:background="#D2D7ED"
+                        android:contentDescription="more"
+                        android:src="@android:drawable/arrow_down_float" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

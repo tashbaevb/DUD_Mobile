@@ -28,7 +28,6 @@ public class RegistrationFragment extends Fragment {
     User newUser;
 
     NavController navController;
-    private boolean emptyEditTextRegistration;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,7 +76,6 @@ public class RegistrationFragment extends Fragment {
                     prefLoginEdit.putString("user_email", email);
                     prefLoginEdit.apply();
 
-//                    navController = Navigation.findNavController(requireActivity(), R.id.nav_host);
                     navController.navigate(R.id.action_registrationFragment_to_navigation_home);
                 } else {
                     Log.e("fail", "fail");

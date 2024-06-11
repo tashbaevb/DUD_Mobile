@@ -9,7 +9,9 @@
             android:id="@+id/navigation_home"
             android:name="com.example.dud_mobile.ui.home.HomeFragment"
             android:label="@string/title_home"
-            tools:layout="@layout/fragment_home"/>
+            tools:layout="@layout/fragment_home">
+        <action android:id="@+id/action_navigation_home_to_lessonsFragment" app:destination="@id/lessonsFragment"/>
+    </fragment>
 
     <fragment
             android:id="@+id/navigation_dashboard"
@@ -42,6 +44,10 @@
                 app:destination="@id/registrationFragment"/>
         <action android:id="@+id/action_loginFragment_to_navigation_home"
                 app:destination="@id/navigation_home"/>
+    </fragment>
+    <fragment android:id="@+id/lessonsFragment" android:name="com.example.dud_mobile.ui.lessons.LessonsFragment"
+              android:label="fragment_lessons" tools:layout="@layout/fragment_lessons">
+        <action android:id="@+id/action_lessonsFragment_to_navigation_home" app:destination="@id/navigation_home"/>
     </fragment>
 
 </navigation>
