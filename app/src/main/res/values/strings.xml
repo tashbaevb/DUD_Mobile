@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DUD_Mobile</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="levels_array">
+        <item>A1</item>
+        <item>A2</item>
+        <item>B1</item>
+        <item>B2</item>
+    </string-array>
+</resources>
