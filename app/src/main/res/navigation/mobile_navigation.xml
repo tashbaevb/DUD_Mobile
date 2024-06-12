@@ -48,6 +48,9 @@
     <fragment android:id="@+id/lessonsFragment" android:name="com.example.dud_mobile.ui.lessons.LessonsFragment"
               android:label="fragment_lessons" tools:layout="@layout/fragment_lessons">
         <action android:id="@+id/action_lessonsFragment_to_navigation_home" app:destination="@id/navigation_home"/>
+        <action android:id="@+id/action_lessonsFragment_to_grammarFragment" app:destination="@id/grammarFragment"/>
     </fragment>
+    <fragment android:id="@+id/grammarFragment" android:name="com.example.dud_mobile.ui.lessons.grammar.GrammarFragment"
+              android:label="GrammarFragment"/>
 
 </navigation>

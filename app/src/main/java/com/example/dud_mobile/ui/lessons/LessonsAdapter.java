@@ -1,10 +1,8 @@
 package com.example.dud_mobile.ui.lessons;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +20,6 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
     private ItemLessonBinding binding;
     private Context context;
     private List<Lesson> lessons;
-    private NavController navController;
 
     public LessonsAdapter(Context context, List<Lesson> lessons) {
         this.context = context;
@@ -43,14 +40,13 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.onBind(lessons.get(position), position);
+        holder.onBind(lessons.get(position));
     }
 
     @Override
     public int getItemCount() {
         return lessons != null ? lessons.size() : 0;
     }
-
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ItemLessonBinding binding;
@@ -60,19 +56,20 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
             this.binding = itemView;
         }
 
-        public void onBind(Lesson lesson, int position) {
+        public void onBind(Lesson lesson) {
             binding.titleLesson.setText(lesson.getTitle());
             binding.descrLesson.setText(lesson.getDescription());
 
             binding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int levelId = position + 1; // Уровни начинаются с 1
+                    // Создаем Bundle и добавляем lessonId в качестве аргумента
                     Bundle bundle = new Bundle();
-                    bundle.putInt("levelId", levelId);
+                    bundle.putInt("lessonId", lesson.getId());
 
-                    navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host);
-                    navController.navigate(R.id.action_navigation_home_to_lessonsFragment, bundle);
+                    // Находим NavController и выполняем навигацию к GrammarFragment с переданным lessonId
+                    NavController navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host);
+                    navController.navigate(R.id.action_lessonsFragment_to_grammarFragment, bundle);
                 }
             });
         }

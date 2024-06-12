@@ -62,8 +62,6 @@ dependencies {
     implementation("com.airbnb.android:lottie:3.6.1")
 
     // Lifecycle
-//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-//    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
 
     implementation("com.squareup.picasso:picasso:2.71828")
@@ -82,11 +80,8 @@ dependencies {
     //JsonConverter
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     // Okhttp
-    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
-
-    implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
 
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
-
 }
