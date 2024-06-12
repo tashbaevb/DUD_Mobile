@@ -8,18 +8,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import com.example.dud_mobile.R;
+import com.example.dud_mobile.constant.ConstantAPI;
 import com.example.dud_mobile.models.GrammarLesson;
 import com.example.dud_mobile.remote_data.RetrofitClient;
 import com.squareup.picasso.Picasso;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GrammarFragment extends Fragment {
 
@@ -53,7 +49,9 @@ public class GrammarFragment extends Fragment {
                     grammarTitle.setText(grammarLesson.getTitle());
                     grammarDescription.setText(grammarLesson.getDescription());
 
-                    Picasso.get().load(grammarLesson.getGrammarImage()).into(grammarImage);
+                    // Загрузка изображения
+                    String imageURL = ConstantAPI.BASE_URL + grammarLesson.getGrammarImage();
+                    Picasso.get().load(imageURL).into(grammarImage);
                 } else {
                     Toast.makeText(requireActivity(), "Failed to load grammar lesson", Toast.LENGTH_SHORT).show();
                 }
@@ -66,6 +64,3 @@ public class GrammarFragment extends Fragment {
         });
     }
 }
-
-
-
