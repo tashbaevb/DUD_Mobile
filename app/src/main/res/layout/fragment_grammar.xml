@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +18,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:text="Title" />
+                android:text="Title"/>
 
         <TextView
                 android:id="@+id/grammarDescription"
@@ -27,15 +26,22 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:gravity="center"
-                android:text="Description" />
+                android:text="Description"/>
 
         <ImageView
                 android:id="@+id/grammarImage"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"/>
+
+        <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"/>
 
     </LinearLayout>
-
 </ScrollView>

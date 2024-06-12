@@ -16,7 +16,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.databinding.FragmentRegistrationBinding;
-import com.example.dud_mobile.models.User;
+import com.example.dud_mobile.models.user.User;
 import com.example.dud_mobile.remote_data.RetrofitClient;
 import retrofit2.Call;
 import retrofit2.Callback;

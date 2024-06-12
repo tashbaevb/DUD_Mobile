@@ -1,6 +1,12 @@
 package com.example.dud_mobile.remote_data;
 
-import com.example.dud_mobile.models.*;
+import com.example.dud_mobile.models.lessons.CheckAnswer;
+import com.example.dud_mobile.models.lessons.GrammarLesson;
+import com.example.dud_mobile.models.lessons.Lesson;
+import com.example.dud_mobile.models.lessons.ReadingLesson;
+import com.example.dud_mobile.models.user.CurrentUser;
+import com.example.dud_mobile.models.user.LoginResponse;
+import com.example.dud_mobile.models.user.User;
 import retrofit2.Call;
 import retrofit2.http.POST;
 import retrofit2.http.*;
@@ -20,4 +26,10 @@ public interface API {
 
     @GET("lesson/get/{lessonId}/grammar")
     Call<GrammarLesson> getGrammarByLesson(@Path("lessonId") int lessonId);
+
+    @GET("lesson/get/{lessonId}/reading")
+    Call<ReadingLesson> getReadingByLesson(@Path("lessonId") int lessonId);
+
+    @POST("reading/check/{readingId}")
+    Call<Integer> checkReadingAnswers(@Path("readingId") int readingId, @Body List<CheckAnswer> answers);
 }

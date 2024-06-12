@@ -17,6 +17,15 @@
                             <option name="y" value="-423" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_grammarFragment_to_readingFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -112,6 +121,18 @@
                           <Point>
                             <option name="x" value="278" />
                             <option name="y" value="297" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="readingFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="566" />
+                            <option name="y" value="-422" />
                           </Point>
                         </option>
                       </LayoutPositions>

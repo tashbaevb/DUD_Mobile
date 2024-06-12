@@ -12,7 +12,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.databinding.ItemLessonBinding;
-import com.example.dud_mobile.models.Lesson;
+import com.example.dud_mobile.models.lessons.Lesson;
 import java.util.List;
 
 public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHolder> {

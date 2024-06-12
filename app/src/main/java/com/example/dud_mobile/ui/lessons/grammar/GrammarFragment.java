@@ -4,13 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.constant.ConstantAPI;
-import com.example.dud_mobile.models.GrammarLesson;
+import com.example.dud_mobile.databinding.FragmentGrammarBinding;
+import com.example.dud_mobile.models.lessons.GrammarLesson;
 import com.example.dud_mobile.remote_data.RetrofitClient;
 import com.squareup.picasso.Picasso;
 import retrofit2.Call;
@@ -19,6 +22,7 @@ import retrofit2.Response;
 
 public class GrammarFragment extends Fragment {
 
+    private FragmentGrammarBinding binding;
     private TextView grammarTitle;
     private TextView grammarDescription;
     private ImageView grammarImage;
@@ -35,8 +39,17 @@ public class GrammarFragment extends Fragment {
 
         loadGrammarData(lessonId);
 
+        Button nextButton = root.findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_grammarFragment_to_readingFragment);
+            }
+        });
+
         return root;
     }
+
 
     private void loadGrammarData(int lessonId) {
         Call<GrammarLesson> apiCall = RetrofitClient.getInstance().getApi().getGrammarByLesson(lessonId);
@@ -49,7 +62,6 @@ public class GrammarFragment extends Fragment {
                     grammarTitle.setText(grammarLesson.getTitle());
                     grammarDescription.setText(grammarLesson.getDescription());
 
-                    // Загрузка изображения
                     String imageURL = ConstantAPI.BASE_URL + grammarLesson.getGrammarImage();
                     Picasso.get().load(imageURL).into(grammarImage);
                 } else {

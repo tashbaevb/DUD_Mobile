@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.dud_mobile.databinding.FragmentLessonsBinding;
-import com.example.dud_mobile.models.Lesson;
+import com.example.dud_mobile.models.lessons.Lesson;
 import com.example.dud_mobile.remote_data.RetrofitClient;
 import java.util.List;
 import retrofit2.Call;
