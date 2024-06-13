@@ -2,6 +2,9 @@ package com.example.dud_mobile.models.lessons;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ReadingQuestion {
 
     @SerializedName("id")
@@ -77,5 +80,13 @@ public class ReadingQuestion {
 
     public void setCorrectOption(int correctOption) {
         this.correctOption = correctOption;
+    }
+
+    public List<String> getOptions() {
+        List<String> options = new ArrayList<>();
+        options.add(option1);
+        options.add(option2);
+        options.add(option3);
+        return options;
     }
 }
