@@ -67,7 +67,6 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
                     Bundle bundle = new Bundle();
                     bundle.putInt("lessonId", lesson.getId());
 
-                    // Находим NavController и выполняем навигацию к GrammarFragment с переданным lessonId
                     NavController navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host);
                     navController.navigate(R.id.action_lessonsFragment_to_grammarFragment, bundle);
                 }

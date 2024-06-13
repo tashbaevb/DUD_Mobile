@@ -29,9 +29,7 @@ public class LessonsFragment extends Fragment {
         adapter = new LessonsAdapter(getActivity(), null);
 
         binding.rvCatalogM.setLayoutManager(new LinearLayoutManager(getActivity()));
-
         binding.rvCatalogM.setAdapter(adapter);
-
         int levelId = getArguments() != null ? getArguments().getInt("levelId") : 1;
 
         loadLessonsData(levelId);
@@ -40,7 +38,6 @@ public class LessonsFragment extends Fragment {
     }
 
     private void loadLessonsData(int levelId) {
-        // Получение списка уроков с сервера для заданного уровня
         Call<List<Lesson>> apiCall = RetrofitClient.getInstance().getApi().getLessonsByLevel(levelId);
         apiCall.enqueue(new Callback<List<Lesson>>() {
             @Override

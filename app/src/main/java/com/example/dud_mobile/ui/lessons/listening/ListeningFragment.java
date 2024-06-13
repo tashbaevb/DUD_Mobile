@@ -12,6 +12,7 @@ import android.widget.*;
 
 import androidx.fragment.app.Fragment;
 
+import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.constant.ConstantAPI;
 import com.example.dud_mobile.models.lessons.CheckAnswer;
@@ -74,6 +75,14 @@ public class ListeningFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 checkAnswers();
+            }
+        });
+
+        Button nextButton = root.findViewById(R.id.doneButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_listeningFragment_to_lessonsFragment);
             }
         });
 

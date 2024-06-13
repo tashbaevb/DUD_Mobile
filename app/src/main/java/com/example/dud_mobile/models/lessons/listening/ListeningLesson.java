@@ -1,6 +1,5 @@
 package com.example.dud_mobile.models.lessons.listening;
 
-import com.example.dud_mobile.models.lessons.reading.ReadingQuestion;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
