@@ -9,10 +9,12 @@ import android.widget.*;
 
 import androidx.fragment.app.Fragment;
 
+import androidx.navigation.NavAction;
+import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.models.lessons.CheckAnswer;
-import com.example.dud_mobile.models.lessons.ReadingLesson;
-import com.example.dud_mobile.models.lessons.ReadingQuestion;
+import com.example.dud_mobile.models.lessons.reading.ReadingLesson;
+import com.example.dud_mobile.models.lessons.reading.ReadingQuestion;
 import com.example.dud_mobile.remote_data.RetrofitClient;
 
 import java.util.ArrayList;
@@ -43,6 +45,15 @@ public class ReadingFragment extends Fragment {
 
         lessonId = getArguments() != null ? getArguments().getInt("lessonId") : 1;
         loadReadingData(lessonId);
+
+
+        Button nextButton = root.findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_readingFragment_to_listeningFragment);
+            }
+        });
 
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override

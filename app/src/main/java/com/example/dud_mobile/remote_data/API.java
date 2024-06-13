@@ -3,7 +3,8 @@ package com.example.dud_mobile.remote_data;
 import com.example.dud_mobile.models.lessons.CheckAnswer;
 import com.example.dud_mobile.models.lessons.GrammarLesson;
 import com.example.dud_mobile.models.lessons.Lesson;
-import com.example.dud_mobile.models.lessons.ReadingLesson;
+import com.example.dud_mobile.models.lessons.listening.ListeningLesson;
+import com.example.dud_mobile.models.lessons.reading.ReadingLesson;
 import com.example.dud_mobile.models.user.CurrentUser;
 import com.example.dud_mobile.models.user.LoginResponse;
 import com.example.dud_mobile.models.user.User;
@@ -32,4 +33,10 @@ public interface API {
 
     @POST("reading/check/{readingId}")
     Call<Integer> checkReadingAnswers(@Path("readingId") int readingId, @Body List<CheckAnswer> answers);
+
+    @GET("lesson/get/{lessonId}/listening")
+    Call<ListeningLesson> getListeningByLesson(@Path("lessonId") int lessonId);
+
+    @POST("listen/check/{listeningId}")
+    Call<Integer> checkListeningAnswers(@Path("listeningId") int listeningId, @Body List<CheckAnswer> answers);
 }

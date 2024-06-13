@@ -28,7 +28,6 @@
                 android:paddingBottom="16dp"
                 android:text="Description"/>
 
-        <!-- Новый контейнер для динамического добавления групп радиокнопок -->
         <LinearLayout
                 android:id="@+id/optionsContainer"
                 android:layout_width="match_parent"
@@ -42,6 +41,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Check"
+                android:layout_gravity="center_horizontal"/>
+
+        <Button
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Next"
                 android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 </ScrollView>

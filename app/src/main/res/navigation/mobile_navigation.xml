@@ -55,6 +55,11 @@
         <action android:id="@+id/action_grammarFragment_to_readingFragment" app:destination="@id/readingFragment"/>
     </fragment>
     <fragment android:id="@+id/readingFragment" android:name="com.example.dud_mobile.ui.lessons.reading.ReadingFragment"
-              android:label="ReadingFragment"/>
+              android:label="ReadingFragment">
+        <action android:id="@+id/action_readingFragment_to_listeningFragment" app:destination="@id/listeningFragment"/>
+    </fragment>
+    <fragment android:id="@+id/listeningFragment"
+              android:name="com.example.dud_mobile.ui.lessons.listening.ListeningFragment"
+              android:label="fragment_listening" tools:layout="@layout/fragment_listening"/>
 
 </navigation>
