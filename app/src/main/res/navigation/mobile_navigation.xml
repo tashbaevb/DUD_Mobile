@@ -13,6 +13,8 @@
         <action android:id="@+id/action_navigation_home_to_lessonsFragment" app:destination="@id/lessonsFragment"/>
         <action android:id="@+id/action_navigation_home_to_navigation_dashboard"
                 app:destination="@id/navigation_dashboard"/>
+        <action android:id="@+id/action_navigation_home_to_navigation_notifications"
+                app:destination="@id/navigation_notifications"/>
     </fragment>
 
     <fragment
@@ -22,13 +24,23 @@
             tools:layout="@layout/fragment_movie">
         <action android:id="@+id/action_navigation_movie_to_movieDetailFragment"
                 app:destination="@id/movieDetailFragment"/>
+        <action android:id="@+id/action_navigation_dashboard_to_navigation_home" app:destination="@id/navigation_home"/>
+        <action android:id="@+id/action_navigation_dashboard_to_navigation_notifications"
+                app:destination="@id/navigation_notifications"/>
     </fragment>
 
     <fragment
             android:id="@+id/navigation_notifications"
-            android:name="com.example.dud_mobile.ui.notifications.NotificationsFragment"
+            android:name="com.example.dud_mobile.ui.notifications.LibraryFragment"
             android:label="@string/title_library"
-            tools:layout="@layout/fragment_notifications"/>
+            tools:layout="@layout/fragment_library">
+        <action android:id="@+id/action_navigation_notifications_to_libraryDetailFragment"
+                app:destination="@id/libraryDetailFragment"/>
+        <action android:id="@+id/action_navigation_notifications_to_navigation_home"
+                app:destination="@id/navigation_home"/>
+        <action android:id="@+id/action_navigation_notifications_to_navigation_dashboard"
+                app:destination="@id/navigation_dashboard"/>
+    </fragment>
 
     <fragment android:id="@+id/registrationFragment"
               android:name="com.example.dud_mobile.auth.RegistrationFragment"
@@ -72,6 +84,15 @@
     </fragment>
     <fragment android:id="@+id/movieDetailFragment"
               android:name="com.example.dud_mobile.ui.dashboard.MovieDetailFragment"
-              android:label="fragment_movie_detail" tools:layout="@layout/fragment_movie_detail"/>
+              android:label="fragment_movie_detail" tools:layout="@layout/fragment_movie_detail">
+        <action android:id="@+id/action_movieDetailFragment_to_navigation_dashboard"
+                app:destination="@id/navigation_dashboard"/>
+    </fragment>
+    <fragment android:id="@+id/libraryDetailFragment"
+              android:name="com.example.dud_mobile.ui.notifications.LibraryDetailFragment"
+              android:label="fragment_library_detail" tools:layout="@layout/fragment_library_detail">
+        <action android:id="@+id/action_libraryDetailFragment_to_navigation_notifications"
+                app:destination="@id/navigation_notifications"/>
+    </fragment>
 
 </navigation>

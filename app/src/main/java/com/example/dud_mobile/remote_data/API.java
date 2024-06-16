@@ -1,5 +1,6 @@
 package com.example.dud_mobile.remote_data;
 
+import com.example.dud_mobile.models.content.Library;
 import com.example.dud_mobile.models.content.Movie;
 import com.example.dud_mobile.models.lessons.qa.CheckAnswer;
 import com.example.dud_mobile.models.lessons.GrammarLesson;
@@ -49,5 +50,6 @@ public interface API {
     @GET("movie/getAll")
     Call<List<Movie>> getAllMovies();
 
-
+    @GET("book/getAll")
+    Call<List<Library>> getAllBooks();
 }

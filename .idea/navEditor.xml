@@ -60,6 +60,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="libraryDetailFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-530" />
+                            <option name="y" value="-598" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="listeningFragment">
                     <value>
                       <LayoutPositions>
@@ -130,7 +142,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_navigation_dashboard_to_movieDetailFragment">
+                            <entry key="action_navigation_movie_to_movieDetailFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -157,6 +169,11 @@
                               </value>
                             </entry>
                             <entry key="action_navigation_home_to_navigation_dashboard">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_navigation_home_to_navigation_notifications">
                               <value>
                                 <LayoutPositions />
                               </value>

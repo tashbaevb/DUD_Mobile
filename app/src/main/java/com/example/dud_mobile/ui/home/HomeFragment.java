@@ -32,14 +32,14 @@ public class HomeFragment extends Fragment {
         binding.cardA2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigateToLessonsFragment(2); // Передаем levelId 2 для карточки A2
+                navigateToLessonsFragment(2);
             }
         });
 
         binding.cardB1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigateToLessonsFragment(3); // Передаем levelId 3 для карточки B1
+                navigateToLessonsFragment(3);
             }
         });
 
@@ -50,17 +50,20 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        // Добавьте обработку других карточек аналогичным образом
+        binding.cardBooks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_navigation_home_to_navigation_notifications);
+            }
+        });
 
         return root;
     }
 
-    // Метод для перехода к LessonsFragment с передачей levelId
     private void navigateToLessonsFragment(int levelId) {
         Bundle bundle = new Bundle();
         bundle.putInt("levelId", levelId);
 
-        // Навигация из HomeFragment в LessonsFragment с передачей levelId
         Navigation.findNavController(requireActivity(), R.id.nav_host)
                 .navigate(R.id.action_navigation_home_to_lessonsFragment, bundle);
     }

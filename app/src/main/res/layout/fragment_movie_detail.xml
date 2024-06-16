@@ -35,7 +35,7 @@
                     android:id="@+id/country_movie_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="country"
+                    android:text="Country"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingTop="16dp"/>
@@ -44,17 +44,22 @@
                     android:id="@+id/description_movie_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="description"
+                    android:text="Description"
                     android:textSize="16sp"
                     android:paddingTop="8dp"/>
 
             <VideoView
                     android:id="@+id/video_view_movie"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="370dp"
+                    android:layout_height="300dp"
                     android:layout_marginTop="16dp"/>
 
+            <Button
+                    android:id="@+id/btn_fullscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Fullscreen"/>
         </LinearLayout>
     </ScrollView>
-
 </FrameLayout>
