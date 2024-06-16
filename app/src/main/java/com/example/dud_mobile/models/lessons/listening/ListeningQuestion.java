@@ -1,6 +1,6 @@
 package com.example.dud_mobile.models.lessons.listening;
 
-import com.example.dud_mobile.models.lessons.Question;
+import com.example.dud_mobile.models.lessons.qa.Question;
 
 public class ListeningQuestion extends Question {
 

@@ -13,12 +13,17 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="345" />
-                            <option name="y" value="-423" />
+                            <option name="x" value="609" />
+                            <option name="y" value="-451" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_grammarFragment_to_lessonsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_grammarFragment_to_readingFragment">
                               <value>
                                 <LayoutPositions />
@@ -34,8 +39,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="83" />
-                            <option name="y" value="-418" />
+                            <option name="x" value="377" />
+                            <option name="y" value="-450" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -60,9 +65,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="586" />
-                            <option name="y" value="-98" />
+                            <option name="x" value="900" />
+                            <option name="y" value="-154" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_listeningFragment_to_lessonsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -93,14 +107,35 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="movieDetailFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-94" />
+                            <option name="y" value="-90" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="navigation_dashboard">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-17" />
-                            <option name="y" value="297" />
+                            <option name="x" value="-77" />
+                            <option name="y" value="-415" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_navigation_dashboard_to_movieDetailFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -121,6 +156,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_navigation_home_to_navigation_dashboard">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -131,8 +171,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="278" />
-                            <option name="y" value="297" />
+                            <option name="x" value="-288" />
+                            <option name="y" value="-747" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -143,12 +183,17 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="566" />
-                            <option name="y" value="-422" />
+                            <option name="x" value="814" />
+                            <option name="y" value="-452" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_readingFragment_to_lessonsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_readingFragment_to_listeningFragment">
                               <value>
                                 <LayoutPositions />

@@ -11,18 +11,23 @@
             android:label="@string/title_home"
             tools:layout="@layout/fragment_home">
         <action android:id="@+id/action_navigation_home_to_lessonsFragment" app:destination="@id/lessonsFragment"/>
+        <action android:id="@+id/action_navigation_home_to_navigation_dashboard"
+                app:destination="@id/navigation_dashboard"/>
     </fragment>
 
     <fragment
             android:id="@+id/navigation_dashboard"
-            android:name="com.example.dud_mobile.ui.dashboard.DashboardFragment"
-            android:label="@string/title_dashboard"
-            tools:layout="@layout/fragment_dashboard"/>
+            android:name="com.example.dud_mobile.ui.dashboard.MovieFragment"
+            android:label="@string/title_movie"
+            tools:layout="@layout/fragment_movie">
+        <action android:id="@+id/action_navigation_movie_to_movieDetailFragment"
+                app:destination="@id/movieDetailFragment"/>
+    </fragment>
 
     <fragment
             android:id="@+id/navigation_notifications"
             android:name="com.example.dud_mobile.ui.notifications.NotificationsFragment"
-            android:label="@string/title_notifications"
+            android:label="@string/title_library"
             tools:layout="@layout/fragment_notifications"/>
 
     <fragment android:id="@+id/registrationFragment"
@@ -65,5 +70,8 @@
               android:label="fragment_listening" tools:layout="@layout/fragment_listening">
         <action android:id="@+id/action_listeningFragment_to_lessonsFragment" app:destination="@id/lessonsFragment"/>
     </fragment>
+    <fragment android:id="@+id/movieDetailFragment"
+              android:name="com.example.dud_mobile.ui.dashboard.MovieDetailFragment"
+              android:label="fragment_movie_detail" tools:layout="@layout/fragment_movie_detail"/>
 
 </navigation>

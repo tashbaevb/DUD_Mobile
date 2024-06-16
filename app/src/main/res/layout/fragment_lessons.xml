@@ -15,7 +15,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             tools:listitem="@layout/item_lesson" tools:ignore="MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

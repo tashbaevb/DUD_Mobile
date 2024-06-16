@@ -1,6 +1,7 @@
 package com.example.dud_mobile.remote_data;
 
-import com.example.dud_mobile.models.lessons.CheckAnswer;
+import com.example.dud_mobile.models.content.Movie;
+import com.example.dud_mobile.models.lessons.qa.CheckAnswer;
 import com.example.dud_mobile.models.lessons.GrammarLesson;
 import com.example.dud_mobile.models.lessons.Lesson;
 import com.example.dud_mobile.models.lessons.listening.ListeningLesson;
@@ -16,12 +17,15 @@ import java.util.List;
 
 public interface API {
 
+    // Registration and Login
     @POST("register")
     Call<User> registrationNewUser(@Body User user);
 
     @POST("auth")
     Call<LoginResponse> checkLoginUser(@Body CurrentUser currentUser);
 
+
+    // Lessons
     @GET("lesson/getAllByLevel/{levelId}")
     Call<List<Lesson>> getLessonsByLevel(@Path("levelId") int levelId);
 
@@ -39,4 +43,11 @@ public interface API {
 
     @POST("listen/check/{listeningId}")
     Call<Integer> checkListeningAnswers(@Path("listeningId") int listeningId, @Body List<CheckAnswer> answers);
+
+
+    // Contents
+    @GET("movie/getAll")
+    Call<List<Movie>> getAllMovies();
+
+
 }

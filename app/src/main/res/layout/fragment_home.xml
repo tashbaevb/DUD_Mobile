@@ -8,6 +8,7 @@
         android:padding="16dp"
         tools:context=".ui.home.HomeFragment">
 
+    <!-- Карточки A1 и A2 -->
     <androidx.cardview.widget.CardView
             android:id="@+id/card_A1"
             android:layout_width="0dp"
@@ -16,7 +17,7 @@
             app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toStartOf="@+id/card_A2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_movies"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_percent="0.45">
 
         <TextView
@@ -37,7 +38,7 @@
             app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/card_A1"
-            app:layout_constraintTop_toBottomOf="@+id/card_A1"
+            app:layout_constraintTop_toTopOf="@+id/card_A1"
             app:layout_constraintWidth_percent="0.45">
 
         <TextView
@@ -50,6 +51,7 @@
                 android:textSize="18sp"/>
     </androidx.cardview.widget.CardView>
 
+    <!-- Карточки B1 и B2 -->
     <androidx.cardview.widget.CardView
             android:id="@+id/card_B1"
             android:layout_width="0dp"

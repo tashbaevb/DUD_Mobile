@@ -22,11 +22,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Обработка нажатий на карточки уровней
         binding.cardA1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigateToLessonsFragment(1); // Передаем levelId 1 для карточки A1
+                navigateToLessonsFragment(1);
             }
         });
 
@@ -41,6 +40,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 navigateToLessonsFragment(3); // Передаем levelId 3 для карточки B1
+            }
+        });
+
+        binding.cardMovies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_navigation_home_to_navigation_dashboard);
             }
         });
 

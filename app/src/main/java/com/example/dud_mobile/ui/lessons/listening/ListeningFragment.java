@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.constant.ConstantAPI;
-import com.example.dud_mobile.models.lessons.CheckAnswer;
+import com.example.dud_mobile.models.lessons.qa.CheckAnswer;
 import com.example.dud_mobile.models.lessons.listening.ListeningLesson;
 import com.example.dud_mobile.models.lessons.listening.ListeningQuestion;
 import com.example.dud_mobile.remote_data.RetrofitClient;
