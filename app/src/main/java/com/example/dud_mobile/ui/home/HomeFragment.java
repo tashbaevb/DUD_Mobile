@@ -57,6 +57,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        binding.cardFeedback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(requireActivity(), R.id.nav_host).navigate(R.id.action_navigation_home_to_feedbackFragment);
+            }
+        });
+
         return root;
     }
 

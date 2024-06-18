@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <data>
-        <variable
-                name="library"
-                type="com.example.dud_mobile.models.content.Library" />
-    </data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_height="wrap_content" android:layout_width="wrap_content"
+              android:layout_gravity="center_horizontal">
 
     <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
             android:layout_margin="8dp">
@@ -24,7 +20,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/ic_launcher_background"/>
 
             <TextView
                     android:id="@+id/title_book"
@@ -33,7 +29,7 @@
                     android:text="title"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:padding="8dp" />
+                    android:padding="8dp"/>
 
             <TextView
                     android:id="@+id/level_book"
@@ -44,8 +40,8 @@
                     android:textStyle="italic"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="8dp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</layout>
+</LinearLayout>

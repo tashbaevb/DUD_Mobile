@@ -7,16 +7,16 @@
         android:layout_height="match_parent"
         tools:context=".ui.notifications.LibraryFragment">
 
-
     <androidx.recyclerview.widget.RecyclerView
+            android:layout_gravity="center_horizontal"
             android:id="@+id/rv_catalog_m"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
-            tools:listitem="@layout/item_library" tools:ignore="MissingConstraints"/>
+            tools:listitem="@layout/item_library"
+            tools:ignore="MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

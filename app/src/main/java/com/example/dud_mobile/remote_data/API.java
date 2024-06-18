@@ -1,5 +1,6 @@
 package com.example.dud_mobile.remote_data;
 
+import com.example.dud_mobile.models.Feedback;
 import com.example.dud_mobile.models.content.Library;
 import com.example.dud_mobile.models.content.Movie;
 import com.example.dud_mobile.models.lessons.qa.CheckAnswer;
@@ -52,4 +53,9 @@ public interface API {
 
     @GET("book/getAll")
     Call<List<Library>> getAllBooks();
+
+
+    // Feedback
+    @POST("user/feedback")
+    Call<String> sendFeedback(@Header("Authorization") String token, @Body Feedback feedback);
 }

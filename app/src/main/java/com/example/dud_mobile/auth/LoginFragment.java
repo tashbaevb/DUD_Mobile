@@ -55,33 +55,33 @@ public class LoginFragment extends Fragment {
 
     private void loginUser(CurrentUser currentUser) {
         try {
-            Call<LoginResponse> response = RetrofitClient.getInstance().getApi()
-                    .checkLoginUser(currentUser);
+            Call<LoginResponse> response = RetrofitClient.getInstance().getApi().checkLoginUser(currentUser);
 
             response.enqueue(new Callback<LoginResponse>() {
                 @Override
                 public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                     if (response.isSuccessful() && response.body() != null) {
 
-//                        String token_n = response.body().getAccess_token();
+                        String access_token = response.body().getAccess_token();
+                        Log.d("API", "Access Token: " + access_token);
 
-                        emailUserIdentify = binding.email.getText().toString();
-                        Bundle bundle = new Bundle();
-                        bundle.putString("identify", emailUserIdentify);
 
-//                        Bundle bundle_token = new Bundle();
-//                        bundle_token.putString("key_token", token_n);
+//                        emailUserIdentify = binding.email.getText().toString();
+//                        Bundle bundle = new Bundle();
+//                        bundle.putString("identify", emailUserIdentify);
+
+                        Bundle bundle_token = new Bundle();
+                        bundle_token.putString("token", access_token);
 
                         try {
                             SharedPreferences preferences = getActivity().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
                             SharedPreferences.Editor prefLoginEdit = preferences.edit();
                             prefLoginEdit.putBoolean("loggedin", true);
-//                            prefLoginEdit.putString("token", token_n);
-//                            prefLoginEdit.commit();
-
+                            prefLoginEdit.putString("token", access_token);
+                            prefLoginEdit.apply();
 
                             navController = Navigation.findNavController(requireActivity(), R.id.nav_host);
-                            navController.navigate(R.id.action_loginFragment_to_navigation_home, bundle);
+                            navController.navigate(R.id.action_loginFragment_to_navigation_home);
                         } catch (Exception e) {
                             Log.d("API", "Token error: " + e.toString());
                         }
@@ -98,6 +98,7 @@ public class LoginFragment extends Fragment {
             Log.d("API", e.toString());
         }
     }
+
 
     private Boolean isEmptyEditTextLogin() {
 
