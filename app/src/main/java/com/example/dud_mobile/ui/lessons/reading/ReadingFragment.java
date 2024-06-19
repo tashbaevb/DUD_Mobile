@@ -46,7 +46,7 @@ public class ReadingFragment extends Fragment {
         loadReadingData(lessonId);
 
 
-        Button nextButton = root.findViewById(R.id.nextButton);
+        ImageButton nextButton = root.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,23 +1,21 @@
 package com.example.dud_mobile.ui.lessons;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
-import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.dud_mobile.R;
 import com.example.dud_mobile.databinding.ItemLessonBinding;
 import com.example.dud_mobile.models.lessons.Lesson;
+
 import java.util.List;
 
 public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHolder> {
 
-    private ItemLessonBinding binding;
     private Context context;
     private List<Lesson> lessons;
 
@@ -34,13 +32,14 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        binding = ItemLessonBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        ItemLessonBinding binding = ItemLessonBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.onBind(lessons.get(position));
+        Lesson lesson = lessons.get(position);
+        holder.bind(lesson);
     }
 
     @Override
@@ -49,6 +48,7 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         private ItemLessonBinding binding;
 
         public ViewHolder(@NonNull ItemLessonBinding itemView) {
@@ -56,21 +56,20 @@ public class LessonsAdapter extends RecyclerView.Adapter<LessonsAdapter.ViewHold
             this.binding = itemView;
         }
 
-        public void onBind(Lesson lesson) {
+        public void bind(Lesson lesson) {
             binding.titleLesson.setText(lesson.getTitle());
             binding.descrLesson.setText(lesson.getDescription());
 
             binding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Создаем Bundle и добавляем lessonId в качестве аргумента
                     Bundle bundle = new Bundle();
                     bundle.putInt("lessonId", lesson.getId());
 
-                    NavController navController = Navigation.findNavController((Activity) itemView.getContext(), R.id.nav_host);
-                    navController.navigate(R.id.action_lessonsFragment_to_grammarFragment, bundle);
+                    Navigation.findNavController(v).navigate(R.id.action_lessonsFragment_to_grammarFragment, bundle);
                 }
             });
         }
     }
 }
+

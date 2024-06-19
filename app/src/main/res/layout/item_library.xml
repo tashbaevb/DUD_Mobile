@@ -5,7 +5,7 @@
               android:layout_gravity="center_horizontal">
 
     <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             app:cardCornerRadius="8dp"
             android:layout_margin="8dp">
@@ -20,7 +20,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/status_404"/>
 
             <TextView
                     android:id="@+id/title_book"

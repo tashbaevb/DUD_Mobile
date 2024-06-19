@@ -14,10 +14,11 @@
                 android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:paddingBottom="16dp"
-                android:text="Title" />
+                android:paddingBottom="14dp"
+                android:gravity="center"
+                android:text="Title"/>
 
         <TextView
                 android:id="@+id/descriptionTextView"
@@ -25,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
                 android:paddingBottom="16dp"
-                android:text="Description" />
+                android:text="Description"/>
 
         <!-- Кнопки для управления воспроизведением -->
         <LinearLayout
@@ -39,14 +40,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Play"
-                    android:onClick="onPlayClick" />
+                    android:backgroundTint="@color/teal_700"
+                    android:onClick="onPlayClick"/>
 
             <Button
                     android:id="@+id/pauseButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Stop"
-                    android:onClick="onPauseClick" />
+                    android:layout_marginStart="20dp"
+                    android:backgroundTint="#F32A2A"
+                    android:onClick="onPauseClick"/>
         </LinearLayout>
 
         <!-- SeekBar для отображения прогресса воспроизведения -->
@@ -56,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:max="100"
-                android:progress="0" />
+                android:progress="0"/>
 
         <!-- Контейнер для вопросов и вариантов ответов -->
         <LinearLayout
@@ -65,21 +69,30 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingTop="16dp"
-                android:paddingBottom="16dp" />
+                android:paddingBottom="16dp"/>
 
-        <Button
-                android:id="@+id/checkButton"
-                android:layout_width="wrap_content"
+        <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Check"
-                android:layout_gravity="center_horizontal" />
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
 
-        <Button
-                android:id="@+id/doneButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DONE"
-                android:layout_gravity="center_horizontal" />
+            <Button
+                    android:id="@+id/checkButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="130dp"
+                    android:backgroundTint="#5FA4F8"
+                    android:text="Check"/>
+
+            <ImageButton
+                    android:id="@+id/doneButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_done_24_wh"
+                    android:layout_marginStart="70dp"
+                    android:backgroundTint="#5FA4F8"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

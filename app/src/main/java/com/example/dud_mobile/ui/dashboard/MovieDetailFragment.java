@@ -1,6 +1,5 @@
 package com.example.dud_mobile.ui.dashboard;
 
-import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,7 +16,6 @@ import com.squareup.picasso.Picasso;
 public class MovieDetailFragment extends Fragment {
 
     private FragmentMovieDetailBinding binding;
-    private boolean isFullscreen = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,8 +32,6 @@ public class MovieDetailFragment extends Fragment {
         } else {
             Log.e("MovieDetailFragment", "Arguments are null");
         }
-
-        binding.btnFullscreen.setOnClickListener(v -> toggleFullscreen());
 
         return root;
     }
@@ -62,16 +58,6 @@ public class MovieDetailFragment extends Fragment {
         });
     }
 
-    private void toggleFullscreen() {
-        if (isFullscreen) {
-            requireActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            binding.videoViewMovie.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
-        } else {
-            requireActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            binding.videoViewMovie.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-        }
-        isFullscreen = !isFullscreen;
-    }
 
     @Override
     public void onDestroyView() {

@@ -78,7 +78,7 @@ public class ListeningFragment extends Fragment {
             }
         });
 
-        Button nextButton = root.findViewById(R.id.doneButton);
+        ImageButton nextButton = root.findViewById(R.id.doneButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -15,11 +15,19 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
+            <ImageView
+                    android:id="@+id/img_book_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"/>
+
             <TextView
                     android:id="@+id/title_book_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Title"
+                    android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:paddingTop="16dp"/>
@@ -29,16 +37,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="author"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:paddingTop="16dp"/>
-
-            <ImageView
-                    android:id="@+id/img_book_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textStyle="italic"/>
 
             <TextView
                     android:id="@+id/description_book_detail"
@@ -46,7 +47,8 @@
                     android:layout_height="wrap_content"
                     android:text="description"
                     android:textSize="16sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="14dp"
+                    android:textStyle="italic"/>
 
             <TextView
                     android:id="@+id/content_book_detail"
@@ -54,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:text="content"
                     android:textSize="16sp"
-                    android:paddingTop="8dp"/>
+                    android:paddingTop="14dp"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

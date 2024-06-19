@@ -4,10 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import com.example.dud_mobile.R;
@@ -39,7 +36,7 @@ public class GrammarFragment extends Fragment {
 
         loadGrammarData(lessonId);
 
-        Button nextButton = root.findViewById(R.id.nextButton);
+        ImageButton nextButton = root.findViewById(R.id.nextButton);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

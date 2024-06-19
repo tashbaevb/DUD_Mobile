@@ -45,11 +45,7 @@ public class LibraryFragment extends Fragment {
             public void onResponse(Call<List<Library>> call, Response<List<Library>> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Library> libraries = response.body();
-                    for (Library library : libraries) {
-                        Log.d("LibraryFragment", "Library: " + library.getTitle());
-                    }
                     adapter.setLibraries(libraries);
-                    adapter.notifyDataSetChanged(); // Добавьте это, чтобы уведомить адаптер об изменениях данных
                     adapter.setOnItemClickListener(new LibraryAdapter.OnItemClickListener() {
                         @Override
                         public void onItemClick(int position) {
@@ -61,7 +57,6 @@ public class LibraryFragment extends Fragment {
                     Toast.makeText(requireActivity(), "Failed to load libraries", Toast.LENGTH_SHORT).show();
                 }
             }
-
 
             @Override
             public void onFailure(Call<List<Library>> call, Throwable t) {

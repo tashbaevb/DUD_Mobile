@@ -4,20 +4,23 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.lessons.grammar.GrammarFragment">
+        tools:context=".ui.lessons.grammar.GrammarFragment"
+        android:padding="16dp">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical">
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <TextView
                 android:id="@+id/grammarTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:gravity="center"
+                android:layout_marginBottom="12dp"
                 android:text="Title"/>
 
         <TextView
@@ -31,17 +34,19 @@
         <ImageView
                 android:id="@+id/grammarImage"
                 android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_launcher_background"/>
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/status_404"/>
 
-        <Button
+        <ImageButton
                 android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Next"
+                android:src="@drawable/baseline_navigate_next_24_wh"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginStart="130dp"
+                android:backgroundTint="#5FA4F8"/>
 
     </LinearLayout>
 </ScrollView>

@@ -3,31 +3,37 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
+             android:padding="14dp"
              tools:context=".ui.feedback.FeedbackFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="wrap_content"
+            android:text="We really appreciate your opinion and would like to hear what you think about our app. Your feedback will help us to improve our product and make it even more convenient and useful for you. Whether it's words of thanks or suggestions for improvement, your opinion matters a lot to us.
+\n\nFeel free to share your impressions! We are always open to feedback from our users.
+\n\nThank you for choosing our app!"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
 
     <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="40dp">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="280dp">
         <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email"/>
+                android:backgroundTint="#68A0D7F4"
+                android:hint="Your opinion ..."/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
             android:id="@+id/sendButton"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="400dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#5FA4F8"
             android:text="SEND"
             android:layout_gravity="center_horizontal"/>
 

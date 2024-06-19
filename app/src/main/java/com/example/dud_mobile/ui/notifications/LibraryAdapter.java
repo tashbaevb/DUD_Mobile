@@ -17,38 +17,35 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
 
     private Context context;
     private List<Library> libraries;
-    private LibraryAdapter.OnItemClickListener listener;
+    private OnItemClickListener listener;
+
+    public List<Library> getLibraries() {
+        return libraries;
+    }
 
     public LibraryAdapter(Context context, List<Library> libraries) {
         this.context = context;
         this.libraries = libraries;
     }
 
-    public List<Library> getLibraries() {
-        return libraries;
-    }
-
     public void setLibraries(List<Library> libraries) {
         this.libraries = libraries;
+        notifyDataSetChanged();
     }
 
-    public void setOnItemClickListener(LibraryAdapter.OnItemClickListener listener) {
+    public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(int position);
     }
 
     @NonNull
     @Override
-    public LibraryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemLibraryBinding binding = ItemLibraryBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
-        return new LibraryAdapter.ViewHolder(binding);
+        return new ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LibraryAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.bind(libraries.get(position));
     }
 
@@ -78,8 +75,11 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
             binding.titleBook.setText(library.getTitle());
             binding.levelBook.setText(library.getLevel().getLevelName());
 
-
             Picasso.get().load(ConstantAPI.BASE_URL + library.getFilePath()).into(binding.imgBook);
         }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 }

@@ -20,7 +20,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background"/>
+                    android:src="@drawable/status_404"/>
 
             <TextView
                     android:id="@+id/title_movie_detail"
@@ -29,15 +29,16 @@
                     android:text="Title"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:paddingTop="16dp"/>
+                    android:gravity="center"
+                    android:paddingTop="18dp"/>
 
             <TextView
                     android:id="@+id/country_movie_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Country"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
                     android:paddingTop="16dp"/>
 
             <TextView
@@ -53,13 +54,6 @@
                     android:layout_width="370dp"
                     android:layout_height="300dp"
                     android:layout_marginTop="16dp"/>
-
-            <Button
-                    android:id="@+id/btn_fullscreen"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Fullscreen"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
